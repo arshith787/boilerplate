@@ -38,7 +38,6 @@ function draw() {
        car.shapeColor = color(255,0,0);
      }
   }
-
   drawSprites();
 } 
 }
