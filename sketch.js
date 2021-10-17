@@ -18,7 +18,7 @@ function setup() {
   bullet.velocityX = speed;
   bullet.size = 0.5
 
-function hasCollided(Lbullet, Lwall){
+function hasCollided(lbullet, lwall){
   bulletRightEdge=lbullet.x +lbullet.width;
   wallLeftEdge=lwall.x;
   
