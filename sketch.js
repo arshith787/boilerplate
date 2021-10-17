@@ -22,10 +22,10 @@ function setup() {
 
 function hasCollided(Lbullet, Lwall)
 
-bulletRightEdge=1bullet.width;
-wallLeftEdge=lwall.x;
+bulletRightEdge=1bullet.x +1bullet.width;
+wallLeftEdge=1wall.x;
 if (bulletRightEdge>=wallLeftEdge)
-  return true
+    return true
 
 return false;
 
@@ -36,6 +36,9 @@ var damage=0.5 * weight * speed * speed/(thickness *thickness *thickness);
 
 if(damage>10)
 wall.shapecolor=color(255,0,0)
+
+if (damage<10)
+wall.shapecolor=color(0,255,0)
 
 function draw() {
   background(0,0,0);  
