@@ -18,7 +18,6 @@ function setup()
   bullet.velocityX = speed;
   bullet.size = 0.5;
 
-
 if(hasCollided(bullet, wall))
 {
   bullet.velocityX=0;
