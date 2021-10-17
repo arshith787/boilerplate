@@ -1,7 +1,6 @@
 var bullet, wall, thickness;
 var speed, weight;
 
-
 function setup() 
 {
   createCanvas(1600,400);
@@ -18,7 +17,7 @@ function setup()
   bullet.shapeColor = color(255,255,255);
   bullet.velocityX = speed;
   bullet.size = 0.5;
-}
+
 
 if(hasCollided(bullet, wall))
 {
@@ -35,7 +34,7 @@ if (damage<10)
 {
   wall.shapecolor=color(0,255,0)
 }
-
+}
 
 function draw()
 {
