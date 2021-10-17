@@ -39,8 +39,7 @@ if (damage<10)
 
 function draw()
 {
-  background(0,0,0);  
-
+  background(0,0,0);
   if (wall.x - bullet.x < (bullet.width + wall.width)/2)
   {
     bullet.velocityX = 0;
