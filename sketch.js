@@ -2,7 +2,8 @@ var bullet, wall, thickness;
 var speed, weight;
 
 
-function setup() {
+function setup() 
+{
   createCanvas(1600,400);
 
   thickness=random(22,83);
@@ -17,28 +18,31 @@ function setup() {
   bullet.shapeColor = color(255,255,255);
   bullet.velocityX = speed;
   bullet.size = 0.5;
-
-
 }
 
-if(hasCollided(bullet, wall)){
+if(hasCollided(bullet, wall))
+{
   bullet.velocityX=0;
-var damage=0.5 * weight * speed * speed/(thickness *thickness *thickness);
+  var damage=0.5 * weight * speed * speed/(thickness *thickness *thickness);
 }
 
-if(damage>10){
-wall.shapecolor=color(255,0,0)
+if(damage>10)
+{
+  wall.shapecolor=color(255,0,0)
 }
 
-if (damage<10){
-wall.shapecolor=color(0,255,0)
+if (damage<10)
+{
+  wall.shapecolor=color(0,255,0)
 }
 
 
-function draw() {
+function draw()
+{
   background(0,0,0);  
 
-  if (wall.x - bullet.x < (bullet.width + wall.width)/2){
+  if (wall.x - bullet.x < (bullet.width + wall.width)/2)
+  {
     bullet.velocityX = 0;
     var deformation = 0.5*weight*speed*speed/22500;
   if (deformation>180)
@@ -57,11 +61,13 @@ function draw() {
   drawSprites();
 }
 
-function hasCollided(lbullet, lwall){
+function hasCollided(lbullet, lwall)
+{
   bulletRightEdge=lbullet.x +lbullet.width;
   wallLeftEdge=lwall.x;
   
-if (bulletRightEdge>=wallLeftEdge){
+if (bulletRightEdge>=wallLeftEdge)
+{
     return true
 }
 return false;
